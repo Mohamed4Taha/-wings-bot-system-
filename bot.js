@@ -609,3 +609,165 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
   }
  
 });
+
+
+
+
+
+
+
+
+
+
+
+//الهيلب
+
+client.on("message", message => {
+	var prefix = "w!";
+ if (message.content === "w!help") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("RANDOM") 
+      .setDescription(`
+	  
+	         Please Select Your Language 
+${prefix}help-ar
+${prefix}help-en
+			 
+	  `)
+   message.channel.sendEmbed(embed)
+    
+   }
+   });
+  
+   client.on("message", message => {
+ if (message.content === "w!help-ar") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("RANDOM") 
+      .setDescription(`
+	  
+	        اختر: 
+ 
+w!help-gn-ar ⇏ اوامر عامة
+w!help-ad-ar ⇏ اوامر ادارة السيرفر
+			 
+`)
+message.channel.sendEmbed(embed)
+ 
+}
+});
+
+client.on("message", message => {
+    if (message.content === "w!help-en") {
+     const embed = new Discord.RichEmbed()  
+         .setColor("RANDOM") 
+         .setDescription(`
+         
+              Chose: 
+                
+   w!help-gn-en ⇏ General commands
+   
+   w!help-ad-en ⇏ Server management commands
+               
+   `)
+   message.channel.sendEmbed(embed)
+    
+   }
+   });
+
+   client.on("message", message => {
+	var prefix = "w!";
+ if (message.content === "w!help-gn-ar") {
+	 message.channel.send('**تم ارسال رسالة في الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setDescription(`
+             
+===================== اوامر عامة =====================
+w!bot ➾ سرعة اتصالك بالانترنت
+w!image ➾ صورة السيرفر
+=========================================================
+**و قريبا المزيد من الاوامر**
+=========================================================
+Support server : https://discord.gg/TVduZPY
+`)
+   message.author.sendEmbed(embed)
+    
+   }
+   }); 
+
+
+
+
+
+   client.on("message", message => {
+	var prefix = "w!";
+ if (message.content === "w!help-gn-en") {
+	 message.channel.send('**Check your dm** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setDescription(`
+             
+==================== General commands ===================== 
+w!bot ➾ bot details
+w!image ➾ server image
+=========================================================
+More commands soon 
+=========================================================
+Support server : https://discord.gg/TVduZPY
+`)
+   message.author.sendEmbed(embed)
+    
+   }
+   }); 
+
+   client.on("message", message => {
+	var prefix = "w!";
+ if (message.content === "#help-ad-ar") {
+	 message.channel.send('**تم ارسال رسالة بالخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setDescription(`
+             
+==================== اوامر ادارية ===================== 
+w!mute ➾ اعطاء ميوت لشخص
+w!unmute ➾ الغاء الميوت من شخص
+w!clear ➾ حذف الرسائل
+w!ban ➾ اعطاء باند
+w!kick ➾ الطرد من السيرفر
+w!mutechannel ➾ قفل الشات
+w!unmutechannel ➾ فتح الشات
+=========================================================
+وقريباً المزيد من الاكواد
+=========================================================
+Support server : https://discord.gg/TVduZPY
+`)
+   message.author.sendEmbed(embed)
+    
+}
+}); 
+
+client.on("message", message => {
+ var prefix = "w!";
+if (message.content === "#help-ad-en") {
+  message.channel.send('**Check your dm** :mailbox_with_mail: ');
+const embed = new Discord.RichEmbed() 
+   .setColor("RANDOM")
+   .setDescription(`
+          
+==================== Management commands ===================== 
+w!mute ➾ give mute
+w!unmute ➾ unmute
+w!clear ➾ clear all messages
+w!ban ➾ give ban
+w!kick ➾ kick members from server
+w!mutechannel ➾ close chat
+w!unmutechannel ➾ open chat
+=========================================================
+More commands soon
+=========================================================
+Support server : https://discord.gg/TVduZPY
+`)
+message.author.sendEmbed(embed)
+ 
+}
+}); 
